@@ -33,15 +33,18 @@
         <img id="office1" src="<?php echo base_url(); ?>/imagens/p1.jpeg">
         <img id="office2" src="<?php echo base_url(); ?>/imagens/p2.jpeg">
         <img id="office3" src="<?php echo base_url(); ?>/imagens/p3.jpeg">
+        <img id="office4" src="<?php echo base_url(); ?>/imagens/p4.jpeg">
       </a-assets>
 
-      <a-entity position="0 0 6">
-      	<a-camera></a-camera>
+      <a-entity position="0 1 6">
+      	<a-camera geometry="primitive: plane; "></a-camera>
       </a-entity>
       <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
       <a-image position="0 1 0" width="25" height="12" src="#office1"></a-image>
-      <a-image position="15 1 0" width="25" height="12" rotation="0 90 0" src="#office2"></a-image>
-      <a-image position="0 1 11 " width="25" height="12" src="#office3"></a-image>
+      <a-image position="16 1 12" width="32" height="15" rotation="0 -90 0" src="#office2"></a-image>
+      <a-image position="0 1 18" width="26" height="12" rotation="0 180 0" src="#office4"></a-image>
+      <a-image position="-14 1 10" width="26" height="14" rotation="-5 90 0" src="#office3"></a-image>
+     
     </a-scene>
   </body>
 </html>
