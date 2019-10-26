@@ -41,12 +41,7 @@
       <a-image position="-5 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
       <a-image position="59 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
       <a-image position="66 -4.5 19.5" width="60" height="10" rotation="90 90 0" src="#reta"></a-image>
-      <a-image position="5  5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
-
-      
-      
-      
-        
+      <a-image position="5  5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>      
 
       
       <a-entity camera look-controls wasd-controls="acceleration: 2500">
