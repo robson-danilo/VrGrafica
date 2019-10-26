@@ -43,7 +43,7 @@
       <a-image position="12 1 48" width="24" height="12" rotation="0 90 0" src="#office2"></a-image> <!-- r8  --> 
 
 
-      <a-image position="-204 1 60" width="24" height="12" rotation="0 0 0" src="#office2"></a-image> <!-- p10  -->
+      <a-image position="-24 1 60" width="24" height="12" rotation="0 0 0" src="#office2"></a-image> <!-- p10  -->
       <a-image position="-48 1 60" width="24" height="12" rotation="0 0 0" src="#office2"></a-image> <!-- p9 --> 
       <a-image position="-72 1 60" width="24" height="12" rotation="0 0 0" src="#office2"></a-image> <!-- p8  --> 
       <a-image position="-96 1 60" width="24" height="12" rotation="0 0 0" src="#office2"></a-image> <!-- p7 --> 
