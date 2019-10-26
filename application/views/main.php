@@ -4,7 +4,6 @@
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
   </head>
   <body>
-  <body>
   <a-scene>
         <a-assets>
             <img id="office1" src="<?php echo base_url(); ?>/imagens/a1.jpg">
@@ -12,14 +11,9 @@
             <img id="office4" src="<?php echo base_url(); ?>/imagens/chao.jpg">
             <img id="reta" src="<?php echo base_url(); ?>/imagens/retap.png">
             <img id="seta1" src="<?php echo base_url(); ?>/imagens/seta1.jpg">
-
-            
-            
-            
+ 
       
         </a-assets>
-
-
 
       <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
       <a-image position="5 -5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
@@ -103,7 +97,6 @@
 
 
 </a-scene>
-  </body>
   </body>
 </html>
 
