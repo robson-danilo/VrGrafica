@@ -3,6 +3,7 @@
   	<title>VRProjectFG</title>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
   </head>
+
   <body>
   <a-scene>
         <a-assets>
@@ -84,13 +85,11 @@
       <a-image position="228 1 72" width="24" height="12" rotation="0 90 0" src="#office2"></a-image> <!-- c2  -->
 
 
+
       
        
 
-      <a-scene>
-      <a-sound src="src: url(click.mp3)" autoplay="true" position="0 0 0"></a-sound>
-      </a-scene>
-      
+
       
       <a-entity camera look-controls wasd-controls="acceleration: 2500">
       </a-entity>
@@ -98,6 +97,7 @@
 
 </a-scene>
   </body>
+
 </html>
 
 
