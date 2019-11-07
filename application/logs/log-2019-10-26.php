@@ -1,5 +1,6 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
+
 ERROR - 26-10-2019 14:33:22 --> 404 Page Not Found --> favicon.ico
 ERROR - 26-10-2019 14:43:22 --> 404 Page Not Found --> a1.jpg
 ERROR - 26-10-2019 14:43:22 --> 404 Page Not Found --> a2.jpg
