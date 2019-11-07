@@ -2,18 +2,25 @@
   <head>
     <title>VRProjectFG</title>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-physics-system@3.3.0/dist/aframe-physics-system.min.js"></script>
+    <script type="text/javascript">
+      this.el.addEventListener('colisao', function () {
+        coin.emit('collect');
+      });
+    </script>
   </head>
   <body>
-  <a-scene>
-        <a-assets>
-            <img id="office1" src="<?php echo base_url(); ?>/imagens/a1.jpg">
-            <img id="office2" src="<?php echo base_url(); ?>/imagens/a2.jpg">
-            <img id="office4" src="<?php echo base_url(); ?>/imagens/chao.jpg">
-            <img id="reta" src="<?php echo base_url(); ?>/imagens/retap.png">
-            <img id="seta1" src="<?php echo base_url(); ?>/imagens/seta1.jpg">
- 
-      
-        </a-assets>
+    <a-scene>
+      <a-assets>
+        <img id="office1" src="<?php echo base_url(); ?>/imagens/a1.jpg">
+        <img id="office2" src="<?php echo base_url(); ?>/imagens/a2.jpg">
+        <img id="office4" src="<?php echo base_url(); ?>/imagens/chao.jpg">
+        <img id="reta" src="<?php echo base_url(); ?>/imagens/retap.png">
+        <img id="seta1" src="<?php echo base_url(); ?>/imagens/seta1.jpg">
+        <a-mixin id="box-bump" animation__bump="property: object3D.position.y; from: 0; to: 0.2; dur: 200; dir: alternate; loop: 1; startEvents: click, colisao;"></a-mixin>
+        
+        
+      </a-assets>
 
       <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
       <a-image position="5 -5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
@@ -105,8 +112,8 @@
       </a-entity>
 
 
-</a-scene>
+    </a-scene>
   </body>
-</html>
+  </html>
 
 

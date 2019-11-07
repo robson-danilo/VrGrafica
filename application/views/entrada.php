@@ -80,10 +80,10 @@
       <a-sky src="#office1" ></a-sky>
       <!--link1-->
       <a-image  position="-15 5 -15" width="10" height="5" src="#office2"></a-image>
-      <a-link  position="-15 5 -14" href="<?php echo base_url(); ?>?linha=1" title="Biologia" image="#office1"></a-link> 
+      <a-link  position="-15 5 -14" href="<?php echo base_url('VrProject/andar1'); ?>?linha=1" title="Biologia" image="#office1"></a-link> 
       <!--link2-->
       <a-image  position="-2 5 -15" width="10" height="5" src="#office2"></a-image>
-      <a-link  position="-2 5 -14" href="<?php echo base_url(); ?>?linha=0" title="Contábeis" image="#office3"></a-link>
+      <a-link  position="-2 5 -14" href="<?php echo base_url('VrProject/andar1'); ?>?linha=0" title="Contábeis" image="#office3"></a-link>
      
 
 

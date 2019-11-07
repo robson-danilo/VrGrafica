@@ -5,10 +5,11 @@ class VrProject extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('main.php');
+		$this->load->view('entrada.php');
+		
 	}
 
-	public function entrada(){
-		$this->load->view('entrada.php');
+	public function andar1(){
+		$this->load->view('main.php');
 	}
 }
