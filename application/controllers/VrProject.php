@@ -7,4 +7,8 @@ class VrProject extends CI_Controller {
 	{
 		$this->load->view('main.php');
 	}
+
+	public function entrada(){
+		$this->load->view('entrada.php');
+	}
 }

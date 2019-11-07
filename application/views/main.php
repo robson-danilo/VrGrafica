@@ -1,7 +1,23 @@
+
+
 <html>
   <head>
   	<title>VRProjectFG</title>
     <script src="https://aframe.io/releases/0.9.2/aframe.min.js"></script>
+    <script>
+      AFRAME.registerComponent("fly", {
+        schema: {
+          stepFactor: { type: "number", default: 0.5 },
+          isFlying: { type: "boolean", default: true }
+        },
+        tick: function () {
+          if (this.data.isFlying) {
+            let newP = this.el.components.camera.camera.parent.position.add(this.el.components.camera.camera.getWorldDirection().multiplyScalar(this.data.stepFactor));
+            this.el.setAttribute('position', newP)
+          }
+        }
+      });
+    </script>
   </head>
   
   <body>
@@ -34,29 +50,31 @@
       <a-image position="62.5 1 12.5" width="25" height="12" rotation="0 90 0" src="#office2"></a-image>
       <a-image position="62.5 1 37.5" width="25" height="12" rotation="0 90 0" src="#office2"></a-image>
       <a-image position="52 1 -54.5" width="25" height="12" rotation="0 90 0" src="#office2"></a-image>
-      <a-image position="30 -4.5 -8" width="79" height="10" rotation="90 0 0" src="#reta"></a-image>
-      <a-image position="59 -4.4 -10.5" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
-      <a-image position="66 -4.4 -5.5" width="5" height="10" rotation="90 -90 0" src="#seta1"></a-image>
-      <a-image position="-5 -4.4 -10.5" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
-      <a-image position="-5 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
-      <a-image position="59 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
-      <a-image position="66 -4.5 19.5" width="60" height="10" rotation="90 90 0" src="#reta"></a-image>
-      <a-image position="5  5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
-
-
+      
+      <?php if ($_GET['linha']==1): ?>
+        <a-image position="30 -4.5 -8" width="79" height="10" rotation="90 0 0" src="#reta"></a-image>
+        <a-image position="59 -4.4 -10.5" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
+        <a-image position="66 -4.4 -5.5" width="5" height="10" rotation="90 -90 0" src="#seta1"></a-image>
+        <a-image position="-5 -4.4 -10.5" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
+        <a-image position="-5 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
+        <a-image position="59 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
+        <a-image position="66 -4.5 19.5" width="60" height="10" rotation="90 90 0" src="#reta"></a-image>
+      <?php endif ?>
       
       
+      <a-image position="5  5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image> 
       
         
 
 
-      
-      <a-entity camera look-controls wasd-controls="acceleration: 2500">
-      </a-entity>
+       <a-camera id="camera" position="0 1.6 0" wasd-controls="acceleration: 2500"  wasd-controls-enabled="true" look>
+          <a-cursor id="cursor" color="black"></a-cursor>
+      </a-camera>
+     
 
 
-</a-scene>
-  </body>
+  </a-scene>
+</body>
 
 </html>
 
