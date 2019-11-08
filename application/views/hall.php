@@ -18,7 +18,7 @@
         <img id="office4" src="<?php echo base_url(); ?>/imagens/chao.jpg">
         <img id="reta" src="<?php echo base_url(); ?>/imagens/retap.png">
         <img id="seta1" src="<?php echo base_url(); ?>/imagens/seta1.jpg">
-
+        <a-asset-item id="poke" src="<?php echo base_url(); ?>/componentes/model.gltf"></a-asset-item>
 
 
       </a-assets>

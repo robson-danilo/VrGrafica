@@ -75,6 +75,7 @@
             <img id="office4" src="<?php echo base_url(); ?>/imagens/chao.jpg">
             <img id="reta" src="<?php echo base_url(); ?>/imagens/retap.png">
             <img id="seta1" src="<?php echo base_url(); ?>/imagens/seta1.jpg">
+            <a-asset-item id="poke" src="<?php echo base_url(); ?>/componentes/model.gltf"></a-asset-item>
       
         </a-assets>
       <a-sky src="#office1" ></a-sky>
@@ -84,7 +85,9 @@
       <!--link2-->
       <a-image  position="-2 5 -15" width="10" height="5" src="#office2"></a-image>
       <a-link  position="-2 5 -14" href="<?php echo base_url('VrProject/hall'); ?>?linha=0" title="Contábeis" image="#office3"></a-link>
-     
+      <a-entity position="0 0 -3" id="weapon">
+        <a-entity gltf-model="#poke"></a-entity>
+      </a-entity>
 
 
       
