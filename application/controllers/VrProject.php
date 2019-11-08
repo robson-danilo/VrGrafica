@@ -10,6 +10,18 @@ class VrProject extends CI_Controller {
 	}
 
 	public function andar1(){
-		$this->load->view('main.php');
+		$this->load->view('andar1.php');
+	}
+
+	public function andar2(){
+		$this->load->view('andar2.php');
+	}
+
+	public function andar3(){
+		$this->load->view('andar3.php');
+	}
+
+	public function hall(){
+		$this->load->view('hall.php');
 	}
 }
