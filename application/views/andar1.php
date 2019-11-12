@@ -90,7 +90,7 @@
       <img id="fundo1" src="<?php echo base_url(); ?>/imagens/fundo1.jpg">
       <img id="fundo2" src="<?php echo base_url(); ?>/imagens/fundo2.jpg">
       <img id="fundo3" src="<?php echo base_url(); ?>/imagens/fundo3.jpg">
-      
+
       <img id="r1" src="<?php echo base_url(); ?>/imagens/r1.jpg">
       <img id="r2" src="<?php echo base_url(); ?>/imagens/r2.jpg">
       <img id="r3" src="<?php echo base_url(); ?>/imagens/r3.jpg">
@@ -145,7 +145,7 @@
       <img id="l7" src="<?php echo base_url(); ?>/imagens/l7.jpg">
       <img id="seta" src="<?php echo base_url()?>/imagens/setaProjeto.png">  
     </a-assets>
-    
+
     <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
     <!-- chão -->
     <a-image position="5 -5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
@@ -155,7 +155,7 @@
     <a-image position="-12 1 -96" width="12" height="12" rotation="0 90 0" src="#l1"></a-image> <!-- l1  -->
     <a-image position="-12 1 -72" width="24" height="12" rotation="0 90 0" src="#l2"></a-image> <!-- l2  -->
     <a-image position="-12 1 -48" width="24" height="12" rotation="0 90 0" src="#l3"></a-image> <!-- l3  -->   
-    
+
     <a-image position="-12 1 -24" width="24" height="12" rotation="0 90 0" src="#l4"></a-image> <!-- l4  -->
     <a-image position="-12 1 0" width="24" height="12" rotation="0 90 0" src="#l5"></a-image> <!-- l5  -->
     <a-image position="-12 1 24" width="24" height="12" rotation="0 90 0" src="#l6"></a-image> <!-- l6  --> 
@@ -228,17 +228,18 @@
       <a-image position="0 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
       <a-image position="-35 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
       <a-image position="-70 -4.5 65" width="6" height="6" rotation="-90 0 0" src="#seta"></a-image> <!-- seta  -->
-      <a-text value="Biologia 1" width="100" color="black" position="-80 1.6 63" rotation="0 0 0"></a-text>          
+      <a-text value="Biologia 1" width="100" color="black" position="-80 1.6 63" rotation="0 0 0"></a-text>    
+      <a-link  position="-70 1.6 63" href="<?php echo base_url('VrProject/hall'); ?>?linha=0" title="Hall" image="#office1"></a-link>       
     <?php }
     if ($_GET['linha'] > 1) { ?>
 
-      
+
       <a-image position="0 -4.5 -40" width="12" height="12" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->           
     <?php } ?>     
-    
-    
+
+
     <a-entity id="rig" position="0 1.6 -50" rotation="0 180 0">
-      <a-camera id="camera"  wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
+      <a-camera id="camera"  wasd-controls="acceleration: 800" wasd-controls-enabled="true" look>
         <a-cursor id="cursor" color="black"></a-cursor>
       </a-camera>
     </a-entity>

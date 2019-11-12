@@ -85,7 +85,7 @@
  <div id="main">
   <a-scene>
     <a-assets>
-      
+
       <img id="office2" src="<?php echo base_url(); ?>/imagens2/a2.jpg">
       <img id="office4" src="<?php echo base_url(); ?>/imagens2/chao.jpg">
       <img id="fundo1" src="<?php echo base_url(); ?>/imagens2/fundo1.jpg">
@@ -229,15 +229,16 @@
       <a-image position="-70 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
       <a-image position="-105 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
       <a-image position="-147 -4.5 80" width="6" height="6" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
-      <a-text value="Banco de Dados" width="100" color="black" position="-132 1.6 80" rotation="0 180 0"></a-text>        
+      <a-text value="Banco de Dados" width="100" color="black" position="-132 1.6 80" rotation="0 180 0"></a-text> 
+       <a-link  position="-147 1.6 63" href="<?php echo base_url('VrProject/hall'); ?>?linha=0" title="Hall" image="#office1"></a-link>       
     <?php } 
     if ($_GET['linha']>2) {?>
      <a-image position="0 -4.5 -43" width="12" height="12" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  --> 
-     
+
    <?php }?>     
-   
+
    <a-entity id="rig" position="0 1.6 -50" rotation="0 180 0">
-    <a-camera id="camera"  wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
+    <a-camera id="camera"  wasd-controls="acceleration: 800" wasd-controls-enabled="true" look>
       <a-cursor id="cursor" color="black"></a-cursor>
     </a-camera>
   </a-entity>

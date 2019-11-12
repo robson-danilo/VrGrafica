@@ -86,11 +86,11 @@
  <div id="main">
   <a-scene>
     <a-assets>
-      
+
       <img id="office4" src="<?php echo base_url(); ?>/imagens3/chao.jpg">
       <img id="fundo1" src="<?php echo base_url(); ?>/imagens3/fundo1.jpg">
       <img id="fundo2" src="<?php echo base_url(); ?>/imagens3/fundo2.jpg">
-      
+
       <img id="r1" src="<?php echo base_url(); ?>/imagens3/r1.jpg">
       <img id="r2" src="<?php echo base_url(); ?>/imagens3/r2.jpg">
       <img id="r3" src="<?php echo base_url(); ?>/imagens3/r3.jpg">
@@ -215,11 +215,11 @@
     <a-image position="-252 1 72" width="24" height="12" rotation="0 90 0" src="#fundo1"></a-image> <!-- c1  -->
     <a-image position="204 1 72" width="24" height="12" rotation="0 270 0" src="#fundo2"></a-image> <!-- c2  -->     
 
-    
+
     <!--Pontos de acesso aos andares.-->
 
     <a-link  position="-10 0 -57" rotation="0 90 0" href="<?php echo base_url('VrProject/andar2'); ?>?linha=<?php echo $_GET['linha']; ?>" title="SEGUNDO ANDAR" image="#office1"></a-link> 
-    
+
 
     <!--lógica da linha dependendo da sala.-->
     <?php if ($_GET['linha']==3): ?>
@@ -231,10 +231,11 @@
       <a-image position="105 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
       <a-image position="139 -4.5 80" width="6" height="6" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
       <a-text value="Desenho Tecnico" width="100" color="black" position="157 1 83" rotation="0 180 0"></a-text>
+      <a-link  position="139 1 65" href="<?php echo base_url('VrProject/hall'); ?>?linha=0" title="Hall" image="#office1"></a-link>    
     <?php endif ?>      
-    
+
     <a-entity id="rig" position="0 1.6 -50" rotation="0 180 0">
-      <a-camera id="camera"  wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
+      <a-camera id="camera"  wasd-controls="acceleration: 800" wasd-controls-enabled="true" look>
         <a-cursor id="cursor" color="black"></a-cursor>
       </a-camera>
     </a-entity>

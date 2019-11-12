@@ -99,11 +99,11 @@
         <img id="escada" src="<?php echo base_url(); ?>/imagenshall/escada.jpg">
         <img id="v1" src="<?php echo base_url(); ?>/imagenshall/v1.jpg">
         <img id="v2" src="<?php echo base_url(); ?>/imagenshall/v2.jpg">
-        <img id="a1" src="<?php echo base_url(); ?>/imagenshall/a1.jpeg">
-        <img id="a2" src="<?php echo base_url(); ?>/imagenshall/a2.jpeg">
+        <img id="p13" src="<?php echo base_url(); ?>/imagenshall/p13.jpg">
 
         <img id="seta" src="<?php echo base_url()?>/imagens/setaProjeto.png">  
         <a-asset-item id="poke" src="<?php echo base_url(); ?>/componentes/model.gltf"></a-asset-item>
+        <a-asset-item id="Table1" src="<?php echo base_url(); ?>/componentes/Table1.gltf"></a-asset-item>
       </a-assets>
 
       <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
@@ -127,15 +127,16 @@
       <a-image position="-24 1 36" width="24" height="12" rotation="0 180 0" src="#v2"></a-image> <!-- v2  -->
 
 
-      <a-image position="0 1 36" width="24" height="12" rotation="0 180 0" src="#a1"></a-image> <!-- a1  --> 
-      <a-image position="24 1 36" width="24" height="12" rotation="0 180 0" src="#a2"></a-image> <!-- a2  -->
-      <a-image position="36  1 24" width="24" height="12" rotation="0 270 0" src="#a2"></a-image> <!-- a3  --> 
-      <a-image position="36 1 0" width="24" height="12" rotation="0 270 0" src="#a2"></a-image> <!-- a4-->   
+      <a-image position="0 1 36" width="24" height="12" rotation="0 180 0" src="#p13"></a-image> <!-- a1  --> 
+      <a-image position="24 1 36" width="24" height="12" rotation="0 180 0" src="#p13"></a-image> <!-- a2  -->
+      <a-image position="36  1 24" width="24" height="12" rotation="0 270 0" src="#p13"></a-image> <!-- a3  --> 
+      <a-image position="36 1 0" width="24" height="12" rotation="0 270 0" src="#p13"></a-image> <!-- a4-->   
 
       <!-- SALAS DE AULA-->
       <a-link peekMode="true"  position="0 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=1" title="Biologia" image="#office1"></a-link> 
       <a-link  position="10 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=2" title="Banco de Dados" image="#office1"></a-link> 
       <a-link  position="20 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=3" title="Desenho Técnico" image="#office1"></a-link> 
+       <a-link  position="30 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=0" title="Passeio" image="#office1"></a-link> 
 
       <!--acesso primeiro andar-->
       <a-link  position="-26 0 -10" rotation="0 0 0" href="<?php echo base_url('VrProject/andar1'); ?>?linha=<?php echo $_GET['linha']; ?>" title="PRIMEITO ANDAR" image="#office1"></a-link> 
@@ -149,7 +150,7 @@
       <?php endif ?>
 
       <a-entity id="rig" position="0 1.6 -90" rotation="0 180 0">
-        <a-camera id="camera"  wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
+        <a-camera id="camera"  wasd-controls="acceleration: 800" wasd-controls-enabled="true" look>
           <a-cursor id="cursor" color="black"></a-cursor>
         </a-camera>
       </a-entity>
@@ -158,6 +159,10 @@
       <a-entity position="30 -5 30" id="weapon">
         <a-entity gltf-model="#poke"></a-entity>
       </a-entity>
+       <a-entity position="30 -3 28" rotation="-90 180 0" id="table">
+        <a-entity gltf-model="#Table1"></a-entity>
+      </a-entity>
+      
 
     </a-scene>
   </div>
@@ -169,7 +174,7 @@
       setTimeout(function () {
         $('#preloader').hide();
         $('#main').show();
-      }, 6 * 1000);
+      }, 2 * 1000);
     });
   </script>
 </body>
