@@ -74,7 +74,7 @@
       <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
 
       
-      <a-text value="Desenho Tecnico" width="10" color="black" position="142 1 83" rotation="0 180 0"></a-text>
+      
 
 
       <a-image position="5 -5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
@@ -140,20 +140,7 @@
       <a-image position="192 1 84" width="24" height="12" rotation="0 180 0" src="#f19"></a-image> <!-- f19  -->  
 
       <a-image position="-252 1 72" width="24" height="12" rotation="0 90 0" src="#fundo1"></a-image> <!-- c1  -->
-      <a-image position="204 1 72" width="24" height="12" rotation="0 270 0" src="#fundo2"></a-image> <!-- c2  -->
-
-
-
-
-
-        <a-image position="0 -4.5 -65" width="24" height="24" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
-        <a-image position="0 -4.5 10" width="24" height="24" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
-        <a-image position="0 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
-        <a-image position="35 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
-        <a-image position="70 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
-        <a-image position="105 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
-        <a-image position="139 -4.5 80" width="6" height="6" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->        
-         
+      <a-image position="204 1 72" width="24" height="12" rotation="0 270 0" src="#fundo2"></a-image> <!-- c2  -->     
 
       
       <!--Pontos de acesso aos andares.-->
@@ -162,14 +149,15 @@
      
 
       <!--lógica da linha dependendo da sala.-->
-      <?php if ($_GET['linha']==1): ?>
-        <a-image position="30 -4.5 -8" width="79" height="10" rotation="90 0 0" src="#reta"></a-image>
-        <a-image position="59 -4.4 -10.5" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
-        <a-image position="66 -4.4 -5.5" width="5" height="10" rotation="90 -90 0" src="#seta1"></a-image>
-        <a-image position="-5 -4.4 -10.5" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
-        <a-image position="-5 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
-        <a-image position="59 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
-        <a-image position="66 -4.5 19.5" width="60" height="10" rotation="90 90 0" src="#reta"></a-image>
+      <?php if ($_GET['linha']==3): ?>
+        <a-image position="0 -4.5 -65" width="24" height="24" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="0 -4.5 10" width="24" height="24" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="0 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="35 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="70 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="105 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="139 -4.5 80" width="6" height="6" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
+        <a-text value="Desenho Tecnico" width="10" color="black" position="142 1 83" rotation="0 180 0"></a-text>
       <?php endif ?>
 
 
