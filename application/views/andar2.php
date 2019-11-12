@@ -65,14 +65,14 @@
             <img id="l4" src="<?php echo base_url(); ?>/imagens2/l4.jpg">
             <img id="l5" src="<?php echo base_url(); ?>/imagens2/l5.jpg">
             <img id="l6" src="<?php echo base_url(); ?>/imagens2/l6.jpg">
-            <img id="l7" src="<?php echo base_url(); ?>/imagens2/l7.jpg">      
-            
- 
-      
+            <img id="l7" src="<?php echo base_url(); ?>/imagens2/l7.jpg">
+            <img id="seta" src="<?php echo base_url()?>/imagens/setaProjeto.png">    
         </a-assets>
 
       <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
+      <!--chao-->
       <a-image position="5 -5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
+      <!-- teto-->
       <a-image position="5  20 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>  
 
       <a-image position="-12 1 -96" width="24" height="12" rotation="0 90 0" src="#l1"></a-image> <!-- l1  -->
@@ -135,7 +135,7 @@
       <a-image position="192 1 84" width="24" height="12" rotation="0 180 0" src="#f19"></a-image> <!-- f19  -->  
 
       <a-image position="-252 1 72" width="24" height="12" rotation="0 90 0" src="#fundo3"></a-image> <!-- c1  -->
-      <a-image position="204 1 72" width="24" height="12" rotation="0 270 0" src="#fundo2"></a-image> <!-- c2  -->
+      <a-image position="204 1 72" width="24" height="12" rotation="0 270 0" src="#fundo2"></a-image> <!-- c2  -->      
 
 
       <!--Pontos de acesso aos andares.-->
@@ -144,20 +144,19 @@
       <a-link  position="-10 0 -42" rotation="0 90 0" href="<?php echo base_url('VrProject/andar3'); ?>?linha=<?php echo $_GET['linha']; ?>" title="TERCEIRO ANDAR" image="#office1"></a-link> 
 
       <!--lógica da linha dependendo da sala.-->
-      <?php if ($_GET['linha']==1): ?>
-        <a-image position="30 -4.5 -8" width="79" height="10" rotation="90 0 0" src="#reta"></a-image>
-        <a-image position="59 -4.4 -10.5" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
-        <a-image position="66 -4.4 -5.5" width="5" height="10" rotation="90 -90 0" src="#seta1"></a-image>
-        <a-image position="-5 -4.4 -10.5" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
-        <a-image position="-5 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
-        <a-image position="59 -4.5 -31" width="40" height="10" rotation="90 90 0" src="#reta"></a-image>
-        <a-image position="66 -4.5 19.5" width="60" height="10" rotation="90 90 0" src="#reta"></a-image>
-      <?php endif ?>
-
-
-      
-      
-      
+      <?php if ($_GET['linha']==2){ ?>
+        <a-image position="0 -4.5 -65" width="24" height="24" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="0 -4.5 10" width="24" height="24" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="0 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="-35 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="-70 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="-105 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
+        <a-image position="-147 -4.5 80" width="6" height="6" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->        
+      <?php } 
+       if ($_GET['linha']>2) {?>
+         <a-image position="0 -4.5 -43" width="12" height="12" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  --> 
+          <a-image position="0 -4.5 -65" width="24" height="24" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
+       <?php }?>     
       
        <a-camera id="camera" position="0 1.6 -30" wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
           <a-cursor id="cursor" color="black"></a-cursor>
