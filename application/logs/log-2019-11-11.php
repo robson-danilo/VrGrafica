@@ -972,3 +972,6 @@ ERROR - 11-11-2019 03:36:50 --> 404 Page Not Found --> a2.jpg
 ERROR - 11-11-2019 03:36:50 --> 404 Page Not Found --> p19.jpg
 ERROR - 11-11-2019 03:36:59 --> 404 Page Not Found --> p19.jpg
 ERROR - 11-11-2019 03:36:59 --> 404 Page Not Found --> p19.jpg
+ERROR - 11-11-2019 21:17:14 --> 404 Page Not Found --> favicon.ico
+ERROR - 11-11-2019 21:17:55 --> 404 Page Not Found --> p19.jpg
+ERROR - 11-11-2019 21:17:55 --> 404 Page Not Found --> p19.jpg
