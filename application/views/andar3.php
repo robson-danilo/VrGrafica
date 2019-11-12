@@ -76,8 +76,9 @@
       
       
 
-
+      <!--chao-->
       <a-image position="5 -5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
+      <!--teto-->
       <a-image position="5  20 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>  
 
       <a-image position="-12 1 -96" width="24" height="12" rotation="0 90 0" src="#l1"></a-image> <!-- l1  -->
