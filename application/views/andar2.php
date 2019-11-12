@@ -12,8 +12,6 @@
             <img id="fundo1" src="<?php echo base_url(); ?>/imagens2/fundo1.jpg">
             <img id="fundo2" src="<?php echo base_url(); ?>/imagens2/fundo2.jpg">
             <img id="fundo3" src="<?php echo base_url(); ?>/imagens2/fundo3.jpg">
-             <img id="reta" src="<?php echo base_url(); ?>/imagens/retap.png">
-            <img id="seta1" src="<?php echo base_url(); ?>/imagens/seta1.jpg">
             <img id="r1" src="<?php echo base_url(); ?>/imagens2/r1.jpg">
             <img id="r2" src="<?php echo base_url(); ?>/imagens2/r2.jpg">
             <img id="r3" src="<?php echo base_url(); ?>/imagens2/r3.jpg">
@@ -151,16 +149,19 @@
         <a-image position="-35 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
         <a-image position="-70 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
         <a-image position="-105 -4.5 73" width="24" height="24" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  -->
-        <a-image position="-147 -4.5 80" width="6" height="6" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->        
+        <a-image position="-147 -4.5 80" width="6" height="6" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
+        <a-text value="Banco de Dados" width="100" color="black" position="-132 1.6 80" rotation="0 180 0"></a-text>        
       <?php } 
        if ($_GET['linha']>2) {?>
          <a-image position="0 -4.5 -43" width="12" height="12" rotation="90 -90 0" src="#seta"></a-image> <!-- seta  --> 
-          <a-image position="0 -4.5 -65" width="24" height="24" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
+          
        <?php }?>     
       
-       <a-camera id="camera" position="0 1.6 -30" wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
+       <a-entity id="rig" position="0 1.6 -50" rotation="0 180 0">
+        <a-camera id="camera"  wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
           <a-cursor id="cursor" color="black"></a-cursor>
-      </a-camera>
+        </a-camera>
+      </a-entity>
 
 
 </a-scene>

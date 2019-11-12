@@ -23,8 +23,9 @@
       <img id="v2" src="<?php echo base_url(); ?>/imagenshall/v2.jpg">
       <img id="a1" src="<?php echo base_url(); ?>/imagenshall/a1.jpeg">
       <img id="a2" src="<?php echo base_url(); ?>/imagenshall/a2.jpeg">
-      <img id="reta" src="<?php echo base_url(); ?>/imagens/retap.png">
-      <img id="seta1" src="<?php echo base_url(); ?>/imagens/seta1.jpg">
+     
+      <img id="seta" src="<?php echo base_url()?>/imagens/setaProjeto.png">  
+      <a-asset-item id="poke" src="<?php echo base_url(); ?>/componentes/model.gltf"></a-asset-item>
     </a-assets>
 
     <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
@@ -53,24 +54,32 @@
     <a-image position="36  1 24" width="24" height="12" rotation="0 270 0" src="#a2"></a-image> <!-- a3  --> 
     <a-image position="36 1 0" width="24" height="12" rotation="0 270 0" src="#a2"></a-image> <!-- a4-->   
 
+    <!-- SALAS DE AULA-->
+     <a-link peekMode="true"  position="0 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=1" title="Biologia" image="#office1"></a-link> 
+     <a-link  position="10 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=2" title="Banco de Dados" image="#office1"></a-link> 
+     <a-link  position="20 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=3" title="Desenho Técnico" image="#office1"></a-link> 
 
+     <!--acesso primeiro andar-->
     <a-link  position="-26 0 -10" rotation="0 0 0" href="<?php echo base_url('VrProject/andar1'); ?>?linha=<?php echo $_GET['linha']; ?>" title="PRIMEITO ANDAR" image="#office1"></a-link> 
 
     <!--lógica da linha dependendo da sala.-->
     <?php if ($_GET['linha']!=0): ?>
-      <a-image position="0 -4.4 -100" width="5" height="10" rotation="90 -90 0" src="#seta1"></a-image>
-      <a-image position="0 -4.5 -90" width="190" height="10" rotation="90 90 0" src="#reta"></a-image>
-      <a-image position="0 -4.4 -50" width="5" height="10" rotation="90 -90 0" src="#seta1"></a-image>
-      <a-image position="0 -4.4 -0" width="5" height="10" rotation="90 180 0" src="#seta1"></a-image>
-      <a-image position="-10 -4.5 -0" width="25" height="10" rotation="90 180 0" src="#reta"></a-image>
-      0<a-image position="-20 -4.4 -0" width="5" height="10" rotation="90 90 0" src="#seta1"></a-image>
+      <a-image position="0 -4.4 -100" width="12" height="12" rotation="90 0 0" src="#seta"></a-image>
+      <a-image position="0 -4.4 -50" width="24" height="24" rotation="90 0 0" src="#seta"></a-image>
+      <a-image position="0 -4.4 -0" width="24" height="24" rotation="90 270 0" src="#seta"></a-image>
+      <a-image position="-20 -4.4 -0" width="12" height="12" rotation="90 180 0" src="#seta"></a-image>
     <?php endif ?>
 
+    <a-entity id="rig" position="0 1.6 -90" rotation="0 180 0">
+      <a-camera id="camera"  wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
+        <a-cursor id="cursor" color="black"></a-cursor>
+      </a-camera>
+    </a-entity>
 
-    <a-camera id="camera" position="0 1.6 -90" rotation="0 0 0" wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
-      <a-cursor id="cursor" color="black"></a-cursor>
-    </a-camera>
-
+    <!-- componentes da cena-->
+    <a-entity position="0 0 -3" id="weapon">
+      <a-entity gltf-model="#poke"></a-entity>
+    </a-entity>
 
   </a-scene>
 </body>

@@ -5,8 +5,8 @@ class VrProject extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('entrada.php');
 		
+		header("Location: http://localhost/VrProject/hall?linha=0");
 	}
 
 	public function andar1(){
