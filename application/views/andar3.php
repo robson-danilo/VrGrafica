@@ -65,16 +65,10 @@
             <img id="l5" src="<?php echo base_url(); ?>/imagens3/l5.jpg">
             <img id="l6" src="<?php echo base_url(); ?>/imagens3/l6.jpg">
             <img id="l7" src="<?php echo base_url(); ?>/imagens3/l7.jpg">
-            <img id="seta" src="<?php echo base_url()?>/imagens/setaProjeto.png">    
-            
- 
-      
+            <img id="seta" src="<?php echo base_url()?>/imagens/setaProjeto.png">      
         </a-assets>
 
-      <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>
-
-      
-      
+      <a-sky src="<?php echo base_url(); ?>/imagens/me.jpg" ></a-sky>   
 
       <!--chao-->
       <a-image position="5 -5 -8" width="1000" height="1000" rotation="90 0 0" src="#office4"></a-image>
@@ -159,12 +153,7 @@
         <a-image position="105 -4.5 73" width="24" height="24" rotation="90 90 0" src="#seta"></a-image> <!-- seta  -->
         <a-image position="139 -4.5 80" width="6" height="6" rotation="90 0 0" src="#seta"></a-image> <!-- seta  -->
         <a-text value="Desenho Tecnico" width="10" color="black" position="142 1 83" rotation="0 180 0"></a-text>
-      <?php endif ?>
-
-
-      
-      
-      
+      <?php endif ?>      
       
        <a-camera id="camera" position="0 1.6 -30" wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
           <a-cursor id="cursor" color="black"></a-cursor>
