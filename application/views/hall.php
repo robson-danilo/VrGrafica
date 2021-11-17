@@ -81,6 +81,30 @@
     }
   </style>
 </head>
+
+
+<script type="text/javascript">
+
+  function fases(mostrarFase,fase,position){
+
+    var img = document.querySelector("#"+fase);
+    if (mostrarFase == 'T'){
+      img.setAttribute('position', position);
+    }else{
+      img.setAttribute('position', position);
+    }
+    /*
+    if (document.getElementById(mostrarFase).style.display == 'block') {
+      console.log("caiu aqui");
+      document.getElementById(mostrarFase).style.display = 'none';
+    }else {
+     console.log("caiu aqui22222");
+     document.getElementById(mostrarFase).style.display = 'block';
+   }
+   */
+ }
+</script>
+
 <body>
   <div id="main">
     <a-scene>
@@ -100,6 +124,14 @@
         <img id="v1" src="<?php echo base_url(); ?>/imagenshall/v1.jpg">
         <img id="v2" src="<?php echo base_url(); ?>/imagenshall/v2.jpg">
         <img id="p13" src="<?php echo base_url(); ?>/imagenshall/p13.jpg">
+
+        <img id="r_fase1" src="<?php echo base_url(); ?>/imagenshall/r_fase1.png">
+        <img id="r_fase2" src="<?php echo base_url(); ?>/imagenshall/r_fase2.png">
+
+        <img id="fase1" src="<?php echo base_url(); ?>/imagenshall/fase1.png">
+        <img id="fase2" src="<?php echo base_url(); ?>/imagenshall/fase2.png">
+
+
 
         <img id="seta" src="<?php echo base_url()?>/imagens/setaProjeto.png">  
         <a-asset-item id="poke" src="<?php echo base_url(); ?>/componentes/model.gltf"></a-asset-item>
@@ -132,54 +164,59 @@
       <a-image position="36  1 24" width="24" height="12" rotation="0 270 0" src="#p13"></a-image> <!-- a3  --> 
       <a-image position="36 1 0" width="24" height="12" rotation="0 270 0" src="#p13"></a-image> <!-- a4-->   
 
-      <!-- SALAS DE AULA-->
+      <a-image src="#fase1" width="8" height="2" position="0 1.6 -107.9" onclick="fases('T','m_fase1','0 1.6 -107')" ></a-image> 
+      <a-image id="m_fase1" src="#r_fase1" width="15" height="10" position="0 -15 -107" onclick="fases('F','m_fase1','0 -15 -107')" ></a-image> 
+
+      <a-image src="#fase2" width="8" height="2" position="15 1.6 -107.9" onclick="fases('T','m_fase2','15 1.6 -107')" ></a-image> 
+      <a-image id="m_fase2"src="#r_fase2" width="15" height="10" position="15 -15 -107" onclick="fases('F','m_fase2','15 -15 -107')" ></a-image> 
+
+      <!-- SALAS DE AULA
       <a-link peekMode="true"  position="0 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=1" title="Biologia" image="#office1"></a-link> 
       <a-link  position="10 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=2" title="Banco de Dados" image="#office1"></a-link> 
       <a-link  position="20 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=3" title="Desenho Técnico" image="#office1"></a-link> 
        <a-link  position="30 1.6 -100" href="<?php echo base_url('VrProject/hall'); ?>?linha=0" title="Passeio" image="#office1"></a-link> 
+     -->
+     <!--acesso primeiro andar
+     <a-link  position="-26 0 -10" rotation="0 0 0" href="<?php echo base_url('VrProject/andar1'); ?>?linha=<?php echo $_GET['linha']; ?>" title="PRIMEITO ANDAR" image="#office1"></a-link> 
+   -->
+     <!--lógica da linha dependendo da sala
+     <?php if ($_GET['linha']!=0): ?>
+      <a-image position="0 -4.4 -100" width="12" height="12" rotation="90 0 0" src="#seta"></a-image>
+      <a-image position="0 -4.4 -50" width="24" height="24" rotation="90 0 0" src="#seta"></a-image>
+      <a-image position="0 -4.4 -0" width="24" height="24" rotation="90 270 0" src="#seta"></a-image>
+      <a-image position="-20 -4.4 -0" width="12" height="12" rotation="90 180 0" src="#seta"></a-image>
+    <?php endif ?>
+    .-->
+    <a-entity id="rig" position="0 1.6 -90" rotation="0 180 0">
+      <a-camera id="camera"  wasd-controls="acceleration: 2000" wasd-controls-enabled="true" look>
+        <a-cursor id="cursor" color="black"></a-cursor>
+      </a-camera>
+    </a-entity>
 
-      <!--acesso primeiro andar-->
-      <a-link  position="-26 0 -10" rotation="0 0 0" href="<?php echo base_url('VrProject/andar1'); ?>?linha=<?php echo $_GET['linha']; ?>" title="PRIMEITO ANDAR" image="#office1"></a-link> 
+    <!-- componentes da cena-->
+    <a-entity position="30 -5 30" id="weapon">
+      <a-entity gltf-model="#poke"></a-entity>
+    </a-entity>
+    <a-entity position="30 -3 28" rotation="-90 180 0" id="table">
+      <a-entity gltf-model="#Table1"></a-entity>
+    </a-entity>
 
-      <!--lógica da linha dependendo da sala.-->
-      <?php if ($_GET['linha']!=0): ?>
-        <a-image position="0 -4.4 -100" width="12" height="12" rotation="90 0 0" src="#seta"></a-image>
-        <a-image position="0 -4.4 -50" width="24" height="24" rotation="90 0 0" src="#seta"></a-image>
-        <a-image position="0 -4.4 -0" width="24" height="24" rotation="90 270 0" src="#seta"></a-image>
-        <a-image position="-20 -4.4 -0" width="12" height="12" rotation="90 180 0" src="#seta"></a-image>
-      <?php endif ?>
 
-      <a-entity id="rig" position="0 1.6 -90" rotation="0 180 0">
-        <a-camera id="camera"  wasd-controls="acceleration: 800" wasd-controls-enabled="true" look>
-          <a-cursor id="cursor" color="black"></a-cursor>
-        </a-camera>
-      </a-entity>
-
-      <!-- componentes da cena-->
-      <a-entity position="30 -5 30" id="weapon">
-        <a-entity gltf-model="#poke"></a-entity>
-      </a-entity>
-       <a-entity position="30 -3 28" rotation="-90 180 0" id="table">
-        <a-entity gltf-model="#Table1"></a-entity>
-      </a-entity>
-      
-
-    </a-scene>
-  </div>
-   <div id="preloader">  <div id="loader"></div></div>
-   <script>
-    $( document ).ready(function() {
-      $('#preloader').show();
-      $('#main').hide();
-      setTimeout(function () {
-        $('#preloader').hide();
-        $('#main').show();
-      }, 2 * 1000);
-    });
-  </script>
+  </a-scene>
+</div>
+<div id="preloader">  <div id="loader"></div></div>
+<script>
+  $( document ).ready(function() {
+    $('#preloader').show();
+    $('#main').hide();
+    setTimeout(function () {
+      $('#preloader').hide();
+      $('#main').show();
+    }, 2 * 1000);
+  });
+</script>
 </body>
 </html>
-
 
 
 

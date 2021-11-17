@@ -239,7 +239,7 @@
 
 
     <a-entity id="rig" position="0 1.6 -50" rotation="0 180 0">
-      <a-camera id="camera"  wasd-controls="acceleration: 800" wasd-controls-enabled="true" look>
+      <a-camera id="camera"  wasd-controls="acceleration: 2000" wasd-controls-enabled="true" look>
         <a-cursor id="cursor" color="black"></a-cursor>
       </a-camera>
     </a-entity>

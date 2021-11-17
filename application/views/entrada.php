@@ -35,7 +35,7 @@
         
 
 
-       <a-camera id="camera" position="0 1.6 0" wasd-controls="acceleration: 2500" wasd-controls-enabled="true" look>
+       <a-camera id="camera" position="0 1.6 0" wasd-controls="acceleration: 20500" wasd-controls-enabled="true" look>
           <a-cursor id="cursor" color="black"></a-cursor>
       </a-camera>
      
